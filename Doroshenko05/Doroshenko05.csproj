@@ -61,6 +61,7 @@
     <Compile Include="ListProcessView.xaml.cs">
       <DependentUpon>ListProcessView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LoaderHelper.cs" />
     <Compile Include="RelayCommand.cs" />
     <Page Include="ListProcessView.xaml">
       <SubType>Designer</SubType>

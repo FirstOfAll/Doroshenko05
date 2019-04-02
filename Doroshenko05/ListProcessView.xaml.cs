@@ -20,9 +20,15 @@ namespace Doroshenko05
     /// </summary>
     public partial class ListProcessView : UserControl
     {
-        public ListProcessView()
+        internal ListProcessView(Action<bool> showLoaderAction)
         {
             InitializeComponent();
+            DataContext = new ListProcessView(showLoaderAction);
+        }
+
+        internal void Close()
+        {
+            ((ListProcessView)DataContext).Close();
         }
     }
 }
