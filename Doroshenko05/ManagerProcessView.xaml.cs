@@ -18,17 +18,17 @@ namespace Doroshenko05
     /// <summary>
     /// Interaction logic for ListProcessView.xaml
     /// </summary>
-    public partial class ListProcessView : UserControl
+    internal partial class ManagerProcessView : UserControl
     {
-        internal ListProcessView(Action<bool> showLoaderAction)
+        internal ManagerProcessView(Action<bool> showLoaderAction)
         {
             InitializeComponent();
-            DataContext = new ListProcessView(showLoaderAction);
+            DataContext = new ManagerProcessViewModel(showLoaderAction);
         }
 
         internal void Close()
         {
-            ((ListProcessView)DataContext).Close();
+            ((ManagerProcessViewModel)DataContext).Close();
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace Doroshenko05
 {
-   internal class RelayCommand
+    internal class RelayCommand
     {
         private Action<object> execute;
 
